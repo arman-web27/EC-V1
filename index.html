@@ -1,0 +1,3408 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#080808" />
+    <title>EarCare — Ayurvedic Herbal Powder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Halant:wght@400;600;700&family=Hind:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <style>
+      :root {
+        --red: #ff70ad;
+        --muted: #b5b5bb;
+        --line: #2b2b2f;
+        --green: #171717;
+        --leaf: #ff70ad;
+        --w: 560px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 20px;
+      }
+      body {
+        background: #000;
+        color: #f8f8fa;
+        font-family: Hind, sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+      button,
+      input {
+        font: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button,
+      a,
+      input {
+        -webkit-tap-highlight-color: transparent;
+      }
+      button {
+        cursor: pointer;
+      }
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible {
+        outline: 2px solid var(--red);
+        outline-offset: 5px;
+      }
+      .page {
+        max-width: var(--w);
+        margin: auto;
+        background: #080808;
+        padding-bottom: 85px;
+        overflow: hidden;
+        border-inline: 1px solid #202024;
+      }
+      section {
+        padding: 38px 25px;
+        border-bottom: 1px solid #222226;
+      }
+      h1,
+      h2,
+      h3 {
+        line-height: 1.35;
+        font-weight: 700;
+      }
+      h1,
+      h2 {
+        font-size: 31px;
+        letter-spacing: -0.5px;
+      }
+      h3 {
+        font-size: 19px;
+      }
+      p {
+        color: var(--muted);
+      }
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--red);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      .eyebrow:before {
+        content: "";
+        width: 22px;
+        height: 2px;
+        background: var(--red);
+      }
+      .accent {
+        color: var(--red);
+      }
+      .intro {
+        margin-top: 14px;
+      }
+      .banner {
+        padding: 0;
+        border: 0;
+      }
+      .banner img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 24px;
+      }
+      .tile {
+        padding: 20px 15px;
+        background: #131315;
+        border: 1px solid var(--line);
+        border-radius: 15px;
+      }
+      .tile i {
+        display: grid;
+        place-items: center;
+        width: 38px;
+        height: 38px;
+        background: #301518;
+        border-radius: 11px;
+        color: var(--red);
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+      .tile h3 {
+        font-size: 18px;
+      }
+      .note {
+        margin-top: 22px;
+        border-left: 3px solid var(--red);
+        background: #181113;
+        padding: 15px 17px;
+        border-radius: 0 12px 12px 0;
+        font-size: 15px;
+      }
+      .note strong {
+        display: block;
+        color: #fff;
+        margin-top: 4px;
+      }
+      .product {
+        background:
+          radial-gradient(ellipse at 50% 35%, #291013, transparent 65%), #09090b;
+      }
+      #product-intro {
+        padding-block: 36px;
+      }
+      #product-intro h2 {
+        font-size: clamp(32px, 9vw, 40px);
+      }
+      .product-subtitle {
+        margin-top: 10px;
+        color: #bcb4b6;
+        font-size: 16px;
+      }
+      .product-showcase {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        margin: 24px 0;
+        padding: 18px;
+        border: 1px solid #543035;
+        border-radius: 20px;
+        background: radial-gradient(
+          ellipse at 50% 45%,
+          #502129 0,
+          #211216 45%,
+          #101013 78%
+        );
+        color: #f7eeee;
+        box-shadow:
+          inset 0 1px 0 #ffffff0a,
+          0 18px 40px #0005;
+      }
+      .product-showcase::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: 76%;
+        aspect-ratio: 1;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #ff727a25;
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 22px #ff70ad05,
+          0 0 55px #ff70ad0c;
+      }
+      .product-showcase::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20%;
+        right: 20%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #ff7b83, transparent);
+      }
+      .product-showcase-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+        border: 1px solid #ff7b8330;
+        border-radius: 100px;
+        background: #170e12cc;
+        color: #f1b3b8;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+      .product-image-slot {
+        position: relative;
+        height: clamp(240px, 72vw, 300px);
+        margin: 18px 0 22px;
+      }
+      .product-image-slot::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 15%;
+        width: 70%;
+        height: 16px;
+        border-radius: 50%;
+        background: #ff70ad38;
+        filter: blur(14px);
+      }
+      .product-image-slot img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 12px;
+        filter: drop-shadow(0 18px 16px #0007);
+      }
+      .product-showcase figcaption {
+        text-align: center;
+        padding-top: 18px;
+        border-top: 1px solid #ffffff12;
+      }
+      .product-showcase figcaption strong {
+        display: block;
+        color: #fff;
+        font-size: 30px;
+        line-height: 1.2;
+        letter-spacing: -1px;
+      }
+      .product-showcase figcaption strong span {
+        color: #ff5964;
+      }
+      .product-showcase figcaption small {
+        font-size: 11px;
+        letter-spacing: 2px;
+        color: #bca5ab;
+      }
+      .product-description {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #c4bec1;
+      }
+      .product-features {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0;
+        list-style: none;
+        margin-top: 20px;
+        padding: 18px 0;
+        border-block: 1px solid #ffffff12;
+      }
+      .product-features li {
+        padding: 0 7px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.5;
+        color: #dfd4d5;
+      }
+      .product-features li + li {
+        border-left: 1px solid #ffffff12;
+      }
+      .product-features i {
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 10px;
+        border: 1px solid #ff70ad25;
+        border-radius: 12px;
+        background: #ff70ad0d;
+        font-size: 23px;
+        color: #ff838c;
+      }
+      #product-intro .cta {
+        margin-top: 22px;
+      }
+      .checklist {
+        list-style: none;
+        margin-top: 22px;
+        display: grid;
+        gap: 10px;
+      }
+      .checklist li:before {
+        content: "✓";
+        color: var(--red);
+        margin-right: 12px;
+      }
+      .cta,
+      .submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        background: #e34a91;
+        color: white;
+        font-weight: 700;
+        border: 1px solid #ff70ad;
+        border-radius: 10px;
+        padding: 14px 20px;
+        margin-top: 24px;
+        min-height: 52px;
+      }
+      .cta:hover,
+      .submit:hover {
+        background: #c83d7e;
+      }
+      .steps {
+        margin-top: 25px;
+      }
+      .step {
+        display: flex;
+        gap: 18px;
+        padding: 21px 0;
+        border-top: 1px solid var(--line);
+      }
+      .number {
+        font-size: 28px;
+        line-height: 1.2;
+        color: var(--red);
+        font-weight: 600;
+      }
+      .step p {
+        font-size: 16px;
+        margin-top: 5px;
+      }
+      #how-it-works {
+        padding-block: 34px;
+        background: linear-gradient(180deg, #0c0b0e, #100c0e);
+      }
+      .support-grid {
+        display: grid;
+        gap: 18px;
+        margin-top: 24px;
+      }
+      .support-card {
+        position: relative;
+        isolation: isolate;
+        display: grid;
+        grid-template-columns: 38% minmax(0, 1fr);
+        align-items: center;
+        min-width: 0;
+        padding-left: 10px;
+        filter: drop-shadow(0 8px 12px #0004);
+      }
+      /* The dark curl sits behind the pointed image ribbon. */
+      .support-card::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 28px;
+        height: calc(100% - 24px);
+        border-radius: 20px 0 0 5px;
+        background: linear-gradient(90deg, #25161a, #48232b);
+      }
+      .support-image {
+        position: relative;
+        z-index: 1;
+        align-self: center;
+        height: 140px;
+        padding: 0;
+        overflow: hidden;
+        border-radius: 13px 13px 0 0;
+        clip-path: polygon(
+          0 0,
+          100% 0,
+          100% calc(100% - 20px),
+          50% 100%,
+          0 calc(100% - 20px)
+        );
+        background: linear-gradient(145deg, #30232a, #19171c 65%, #24171d);
+        box-shadow: inset 0 1px 0 #ffffff16;
+      }
+      .support-photo {
+        position: relative;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        border-radius: 0;
+        background: transparent;
+      }
+      .support-photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .support-copy {
+        position: relative;
+        min-width: 0;
+        margin-block: 10px 24px;
+        padding: 12px 15px 12px 12px;
+        border-block: 1px solid #39252c;
+        background: linear-gradient(90deg, #21171c, #141216);
+      }
+      .support-copy::after {
+        content: "";
+        position: absolute;
+        inset: -1px 0 -1px auto;
+        width: 4px;
+        border-radius: 3px;
+        background: linear-gradient(#d44a57, #7b2735);
+      }
+      .support-card:nth-child(even) {
+        grid-template-columns: minmax(0, 1fr) 38%;
+        padding-left: 0;
+        padding-right: 10px;
+      }
+      .support-card:nth-child(even)::before {
+        left: auto;
+        right: 0;
+        border-radius: 0 20px 5px 0;
+        background: linear-gradient(90deg, #48232b, #25161a);
+      }
+      .support-card:nth-child(even) .support-image {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .support-card:nth-child(even) .support-copy {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 12px 12px 12px 15px;
+        text-align: right;
+        background: linear-gradient(90deg, #141216, #21171c);
+      }
+      .support-card:nth-child(even) .support-copy::after {
+        left: 0;
+        right: auto;
+      }
+      .support-card h3 {
+        font-size: 18px;
+        line-height: 1.3;
+        overflow-wrap: anywhere;
+        color: #fff4f5;
+      }
+      .support-card p {
+        margin-top: 7px;
+        font-size: 14px;
+        line-height: 1.55;
+        color: #bcb5bb;
+      }
+      #how-it-works > .fine {
+        margin-top: 24px;
+        padding-left: 12px;
+        border-left: 2px solid #75313c;
+        font-size: 13px;
+      }
+      @media (max-width: 360px) {
+        .support-grid {
+          gap: 16px;
+        }
+        .support-image {
+          height: 130px;
+        }
+        .support-copy {
+          padding: 12px 13px 12px 10px;
+        }
+        .support-card:nth-child(even) .support-copy {
+          padding: 12px 10px 12px 13px;
+        }
+        .support-card h3 {
+          font-size: 16px;
+        }
+        .support-card p {
+          font-size: 13px;
+        }
+      }
+      .fine {
+        font-size: 14px;
+        color: #b4a7a9;
+      }
+      .guidance-icon {
+        width: 54px;
+        height: 54px;
+        display: grid;
+        place-items: center;
+        border: 1px solid #6b292d;
+        border-radius: 50%;
+        color: var(--red);
+        font-size: 27px;
+        margin-bottom: 20px;
+      }
+      #ingredients {
+        padding-block: 20px;
+        background:
+          radial-gradient(ellipse at 100% 0, #251317, transparent 60%), #0b0b0d;
+      }
+      .ingredient-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px 14px;
+        margin: 30px auto 24px;
+      }
+      .herb {
+        min-width: 0;
+        padding: 10px 10px 0;
+        overflow: hidden;
+        border: 1px solid #70344e;
+        border-radius: 90px 90px 20px 20px;
+        background: linear-gradient(150deg, #29151f, #121114);
+        box-shadow: 0 8px 20px #0003;
+      }
+      .herb-image {
+        position: relative;
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: 50% 50% 16px 16px;
+        background: radial-gradient(ellipse at 50% 40%, #50253b, #21131c 80%);
+        border: 1px solid #ffffff08;
+        display: grid;
+        place-items: center;
+      }
+      .herb-placeholder {
+        color: #d997b4;
+        font-size: 13px;
+        text-align: center;
+        padding: 16px;
+      }
+      .herb-image img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .herb h3 {
+        margin: 0;
+        padding: 16px 4px 18px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.35;
+        color: #f5edf0;
+        overflow-wrap: anywhere;
+      }
+      .herb h3::before {
+        display: none;
+      }
+      .herb h3 span {
+        display: block;
+        margin-top: 5px;
+        color: #f395bf;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      /* Equal square ingredient cards */
+      #ingredients .herb {
+        height: auto;
+        aspect-ratio: 1 / 1;
+        padding: 0;
+        border-radius: 18px;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        background: #181018;
+      }
+      #ingredients .herb-image {
+        position: absolute;
+        inset: 0 0 28%;
+        aspect-ratio: auto;
+        border-radius: 17px 17px 0 0;
+      }
+      #ingredients .herb::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 35%;
+        background: linear-gradient(180deg, rgba(24,16,24,.1), #181018 40%);
+        pointer-events: none;
+      }
+      #ingredients .herb h3 {
+        position: absolute;
+        z-index: 1;
+        inset: auto 0 0;
+        min-height: 28%;
+        padding: 10px 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        font-size: clamp(15px, 2vw, 20px);
+        line-height: 1.1;
+      }
+      #ingredients > p:last-child {
+        color: #bca5b0;
+        font-size: 13px;
+      }
+      @media (max-width: 360px) {
+        .ingredient-grid {
+          gap: 12px 10px;
+        }
+        .herb {
+          padding: 6px 6px 0;
+          border-radius: 75px 75px 16px 16px;
+        }
+        .herb h3 {
+          font-size: 16px;
+          padding: 13px 2px 15px;
+        }
+      }
+      .quality {
+        padding-block: 34px;
+        background:
+          radial-gradient(ellipse at 0 50%, #2a1219, transparent 65%), #0c0c0f;
+      }
+      #quality .quality-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 28px;
+      }
+      #quality .quality-tile {
+        min-width: 0;
+        margin: 0;
+        padding: 12px;
+        border: 1px solid #683047;
+        border-radius: 18px;
+        background: linear-gradient(145deg, #29151f, #120e12);
+        box-shadow: 0 8px 22px #0003;
+      }
+      #quality .quality-art {
+        position: relative;
+        display: grid;
+        place-items: center;
+        aspect-ratio: 1;
+        overflow: hidden;
+        width: 86%;
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 116, 183, .28);
+        background: #fff8fb;
+      }
+      #quality .quality-art span {
+        padding: 12px;
+        color: #8f4568;
+        font-size: 13px;
+        text-align: center;
+      }
+      #quality .quality-art img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 12px;
+      }
+      #quality .quality-art [hidden] { display: none; }
+      #quality .quality-tile figcaption {
+        display: grid;
+        place-items: center;
+        min-height: 52px;
+        padding: 12px 2px 0;
+        color: #ffe2ef;
+        text-align: center;
+        font-size: clamp(15px, 4vw, 19px);
+        font-weight: 700;
+        line-height: 1.35;
+      }
+      @media (max-width: 360px) {
+        #quality .quality-grid { gap: 10px; }
+        #quality .quality-tile { padding: 8px; border-radius: 14px; }
+        #quality .quality-art img { padding: 8px; }
+      }
+      .certificate-gallery {
+        --certificate-width: clamp(160px, 48vw, 200px);
+        display: flex;
+        gap: 14px;
+        margin-top: 20px;
+        padding: 16px calc((100% - var(--certificate-width)) / 2) 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 0;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+      }
+      .certificate-gallery::-webkit-scrollbar {
+        display: none;
+      }
+      .certificate-gallery:focus-visible {
+        outline: 2px solid var(--red);
+        outline-offset: 5px;
+        border-radius: 8px;
+      }
+      .certificate-card {
+        position: relative;
+        overflow: hidden;
+        flex: 0 0 var(--certificate-width);
+        min-width: 0;
+        scroll-snap-align: center;
+        padding: 10px;
+        border: 1px solid #443039;
+        border-radius: 12px;
+        background: linear-gradient(145deg, #211a20, #121115);
+        box-shadow: 0 8px 20px #0003;
+        opacity: 0.6;
+        transform: translateY(5px) scale(0.94);
+        transition:
+          opacity 0.65s ease,
+          transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+          border-color 0.65s ease,
+          box-shadow 0.65s ease;
+      }
+      .certificate-card.is-active {
+        opacity: 1;
+        transform: translateY(-3px) scale(1);
+        border-color: #a54c5b;
+        box-shadow:
+          0 8px 24px #0005,
+          0 0 18px #ff70ad0d;
+        animation: certificate-glow 3s ease-in-out infinite;
+      }
+      .certificate-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(
+          110deg,
+          transparent 35%,
+          #ffffff09 47%,
+          #ffffff15 50%,
+          transparent 65%
+        );
+        transform: translateX(-130%);
+      }
+      .certificate-card.is-active::after {
+        animation: certificate-shine 3s ease-in-out infinite;
+      }
+      @keyframes certificate-shine {
+        0%,
+        12% {
+          transform: translateX(-130%);
+        }
+        65%,
+        100% {
+          transform: translateX(130%);
+        }
+      }
+      @keyframes certificate-glow {
+        0%,
+        100% {
+          box-shadow:
+            0 8px 24px #0005,
+            0 0 12px #ff70ad10;
+        }
+        50% {
+          box-shadow:
+            0 12px 28px #0006,
+            0 0 22px #ff70ad2b;
+        }
+      }
+      .certificate-topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 9px;
+        color: #c2aeb6;
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+      .certificate-topline span:last-child {
+        color: #ff7a87;
+      }
+      .certificate-image {
+        position: relative;
+        height: 160px;
+        overflow: hidden;
+        border: 1px solid #4a3b43;
+        background: #19171b;
+        box-shadow: inset 0 0 0 5px #ffffff03;
+      }
+      .certificate-image img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .certificate-card figcaption {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 7px;
+        padding-top: 7px;
+        border-top: 1px solid #ffffff12;
+      }
+      .certificate-card figcaption::before {
+        content: "";
+        width: 3px;
+        height: 27px;
+        flex-shrink: 0;
+        border-radius: 2px;
+        background: #e94d60;
+      }
+      .certificate-card h3 {
+        font-size: 16px;
+        color: #f6edf1;
+      }
+      .certificate-card small {
+        display: block;
+        margin-top: 3px;
+        font-size: 11px;
+        color: #aea0a7;
+      }
+      .certificate-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 2px;
+      }
+      .certificate-controls[hidden] {
+        display: none;
+      }
+      .certificate-controls button {
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        width: 32px;
+        height: 36px;
+        border: 1px solid #422a33;
+        border-radius: 9px;
+        background: #1c151b;
+        color: #ead8de;
+        font-size: 16px;
+      }
+      .certificate-controls .certificate-dot {
+        width: 26px;
+        border: 0;
+        background: transparent;
+      }
+      .certificate-dot::before {
+        content: "";
+        width: 20px;
+        height: 3px;
+        border-radius: 3px;
+        background: #51353f;
+        transition: background 0.3s;
+      }
+      .certificate-dot[aria-current="true"]::before {
+        background: #ff626f;
+        box-shadow: 0 0 8px #ff70ad45;
+      }
+      .certificate-controls button:hover {
+        color: white;
+        background-color: #39202a;
+      }
+      .final-cta {
+        text-align: center;
+        background:
+          radial-gradient(ellipse at top, #3b1015, transparent 70%), #0b090a;
+      }
+      .final-cta .eyebrow {
+        justify-content: center;
+      }
+      #start-routine {
+        padding: 38px 20px;
+        background: radial-gradient(ellipse at 20% 50%, #3a182b, transparent 65%), #0d090d;
+      }
+      #start-routine .routine-product {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        gap: 12px;
+        margin: 26px 0 22px;
+        padding: 20px 12px;
+        border: 1px solid #673249;
+        border-radius: 22px;
+        background: linear-gradient(145deg, #2c1724, #130f13);
+        animation: routine-card-in .7s ease both;
+      }
+      #start-routine .routine-bottle {
+        display: block;
+        width: 100%;
+        max-width: 180px;
+        height: 185px;
+        object-fit: contain;
+        margin: auto;
+        filter: drop-shadow(0 10px 10px #0005);
+        animation: routine-bottle-float 4.2s ease-in-out infinite;
+      }
+      #start-routine .routine-info {
+        min-width: 0;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      #start-routine .routine-rating {
+        order: 2;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin: 12px 0 0;
+        padding: 8px 12px;
+        border: 1px solid rgba(255, 119, 183, .35);
+        border-radius: 999px;
+        background: rgba(255, 119, 183, .08);
+        color: #ffe8f2;
+        font-size: 13px;
+        transform: translateX(-18px);
+      }
+      #start-routine .rating-stars {
+        color: #ff77b7;
+        letter-spacing: 2px;
+        font-size: 18px;
+      }
+      #start-routine .routine-rating small { color: #bda6b2; }
+      #start-routine .routine-trust { order: 1; }
+      #start-routine .routine-info h3 { margin: 0 0 5px; font-size: 25px; color: #fff; }
+      #start-routine .routine-info > p { margin: 0; color: #d6b4c4; font-size: 13px; line-height: 1.5; }
+      #start-routine .routine-trust {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 118px;
+        height: 118px;
+        margin: 16px 0 0;
+        border-radius: 50%;
+        border: 4px double #a8396a;
+        background: #ffe4ef;
+        color: #752047;
+        box-shadow: 0 5px 18px #0004;
+        transform: rotate(-7deg);
+        line-height: 1.25;
+        text-align: center;
+      }
+      #start-routine .routine-trust span { font-size: 12px; }
+      #start-routine .routine-trust strong { font-size: 24px; margin: 3px 0; }
+      #start-routine .routine-trust { animation: trust-pulse 2.8s ease-in-out infinite; }
+      #start-routine .routine-rating { animation: rating-glow 2.8s ease-in-out infinite; }
+      #start-routine > .cta {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        transition: transform .2s ease, box-shadow .2s ease;
+      }
+      #start-routine > .cta:hover { transform: translateY(-3px); box-shadow: 0 10px 24px #ff70ad44; }
+      @keyframes routine-card-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes routine-bottle-float { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-8px) rotate(2deg); } }
+      @keyframes trust-pulse { 0%,100% { box-shadow: 0 5px 18px #0004; } 50% { box-shadow: 0 5px 26px #ff70ad66; } }
+      @keyframes rating-glow { 0%,100% { border-color: #ff77b759; } 50% { border-color: #ffb6d8; } }
+      @media (prefers-reduced-motion: reduce) {
+        #start-routine .routine-product, #start-routine .routine-bottle, #start-routine .routine-trust, #start-routine .routine-rating { animation: none; }
+      }
+      @media (max-width: 360px) {
+        #start-routine { padding: 30px 14px; }
+        #start-routine .routine-product { padding: 16px 8px; gap: 8px; }
+        #start-routine .routine-bottle { height: 160px; }
+        #start-routine .routine-trust { width: 104px; height: 104px; }
+        #start-routine .routine-rating { transform: translateX(-10px); }
+      }
+      .final-cta h3 {
+        margin-top: 25px;
+        font-size: 24px;
+      }
+      .final-cta-showcase {
+        position: relative;
+        isolation: isolate;
+        width: min(100%, 280px);
+        margin: 26px auto 22px;
+      }
+      .final-cta-showcase::before {
+        content: "";
+        position: absolute;
+        inset: 15% 5% 0;
+        z-index: -1;
+        background: radial-gradient(ellipse, #a331cc38, transparent 70%);
+      }
+      .final-cta-product {
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 14px 18px #0006);
+        animation: capsule-float 4s ease-in-out infinite;
+      }
+      .discount-sticker {
+        position: absolute;
+        top: 2px;
+        right: -12px;
+        z-index: 1;
+        isolation: isolate;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        color: #521a0b;
+        filter: drop-shadow(0 5px 0 #aa5819) drop-shadow(0 10px 12px #0008);
+        transform: rotate(10deg);
+        animation: discount-pulse 3.6s ease-in-out infinite;
+      }
+      .discount-sticker::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background: linear-gradient(
+          135deg,
+          #fff8c4 5%,
+          #ffdb67 35%,
+          #ffb52c 65%,
+          #ffe997 90%
+        );
+        clip-path: polygon(
+          50% 0%,
+          59% 9%,
+          71% 5%,
+          75% 18%,
+          89% 18%,
+          89% 32%,
+          100% 39%,
+          94% 50%,
+          100% 61%,
+          89% 68%,
+          89% 82%,
+          75% 82%,
+          71% 95%,
+          59% 91%,
+          50% 100%,
+          41% 91%,
+          29% 95%,
+          25% 82%,
+          11% 82%,
+          11% 68%,
+          0% 61%,
+          6% 50%,
+          0% 39%,
+          11% 32%,
+          11% 18%,
+          25% 18%,
+          29% 5%,
+          41% 9%
+        );
+      }
+      .discount-sticker::after {
+        content: "";
+        position: absolute;
+        inset: 12px;
+        z-index: -1;
+        border: 1px solid #a9542566;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 3px #fff3be70;
+        background: linear-gradient(135deg, #ffffff70, transparent 48%);
+      }
+      .discount-sticker strong {
+        font-size: 32px;
+        line-height: 1.1;
+        font-weight: 900;
+        letter-spacing: -1.5px;
+        text-shadow: 0 1px #fff5c9;
+      }
+      .discount-sticker span {
+        margin-top: 3px;
+        padding: 2px 9px;
+        border-radius: 4px;
+        background: #681e14;
+        color: #fff1b6;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 800;
+        letter-spacing: 2px;
+      }
+      @keyframes discount-pulse {
+        0%,
+        100% {
+          transform: translateY(0) rotate(10deg) scale(1);
+        }
+        50% {
+          transform: translateY(-4px) rotate(6deg) scale(1.04);
+        }
+      }
+      @keyframes capsule-float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .final-cta small {
+        color: var(--muted);
+      }
+      .section-head {
+        margin-bottom: 23px;
+      }
+      .form-card {
+        background: #141416;
+        padding: 22px 18px;
+        border: 1px solid #452226;
+        border-radius: 18px;
+      }
+      .field {
+        margin-bottom: 18px;
+      }
+      .field label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 7px;
+      }
+      .field input {
+        width: 100%;
+        min-height: 53px;
+        background: #09090b;
+        color: white;
+        border: 1px solid #424247;
+        border-radius: 9px;
+        padding: 12px;
+        outline: none;
+      }
+      .field input:focus {
+        border-color: var(--red);
+        box-shadow: 0 0 0 3px #ff70ad20;
+      }
+      .field input::placeholder {
+        color: #94949c;
+        font-size: 15px;
+      }
+      .submit {
+        width: 100%;
+        cursor: pointer;
+        margin-top: 8px;
+      }
+      .submit:disabled {
+        opacity: 0.6;
+        cursor: wait;
+      }
+      .err {
+        display: none;
+        color: #ff8990;
+        font-size: 13px;
+        margin-top: 5px;
+      }
+      .err.show {
+        display: block;
+      }
+      .secure {
+        text-align: center;
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 15px;
+      }
+      .review-note {
+        padding: 22px;
+        border: 1px dashed #534044;
+        border-radius: 15px;
+        margin-top: 22px;
+      }
+      .review-note i {
+        color: var(--red);
+        font-size: 25px;
+        margin-bottom: 12px;
+      }
+      .review-note strong {
+        color: white;
+      }
+      .review-note .fine {
+        margin-top: 13px;
+      }
+      #customer-reviews {
+        padding-block: 34px;
+        background:
+          radial-gradient(ellipse at 100% 20%, #2b141b, transparent 60%),
+          #0b0b0e;
+      }
+      .customer-reviews-list {
+        display: grid;
+        gap: 18px;
+        margin-top: 26px;
+      }
+      .customer-review {
+        position: relative;
+        overflow: hidden;
+        padding: 24px 20px;
+        border: 1px solid #64334c;
+        border-radius: 22px;
+        background: linear-gradient(135deg, #20171d, #121114);
+        box-shadow: 0 10px 25px #0003;
+      }
+      .customer-review::before {
+        content: "";
+        position: absolute;
+        inset: 0 25% auto;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #d96075, transparent);
+      }
+      .customer-review-header {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid #ff85bb20;
+      }
+      .customer-photo {
+        position: relative;
+        display: grid;
+        place-items: center;
+        color: #ffa1cb;
+        font-size: 22px;
+        font-weight: 700;
+        flex: 0 0 76px;
+        width: 76px;
+        height: 76px;
+        overflow: hidden;
+        border: 1px solid #6b3545;
+        border-radius: 50%;
+        background: radial-gradient(circle at 40% 30%, #38252f, #1d181e);
+        box-shadow: 0 0 0 4px #ffffff03;
+      }
+      .customer-photo img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .customer-photo [hidden] { display: none; }
+      .customer-review-header::after {
+        content: "\201C";
+        margin-left: auto;
+        color: #f478b4;
+        font: 68px/1 Georgia, serif;
+        align-self: flex-start;
+        height: 40px;
+      }
+      .customer-review h3 {
+        margin: 0;
+        font-size: 19px;
+        color: #fff2f5;
+      }
+      .customer-city {
+        margin-top: 2px;
+        font-size: 13px;
+        color: #b8a6ae;
+      }
+      .customer-rating {
+        margin-top: 18px;
+        color: #ffc46b;
+        font-size: 17px;
+        letter-spacing: 3px;
+        line-height: 1;
+      }
+      .customer-review blockquote {
+        margin: 18px 0 0;
+      }
+      .customer-review blockquote p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #d1c5cb;
+      }
+      .customer-review-note {
+        margin-top: 18px;
+        font-size: 13px;
+        color: #ac9da5;
+      }
+      @media (max-width: 360px) {
+        .customer-review {
+          padding: 18px 15px;
+        }
+        .customer-review blockquote p {
+          font-size: 15px;
+        }
+      }
+      details {
+        border-bottom: 1px solid var(--line);
+        padding: 18px 0;
+      }
+      summary {
+        list-style: none;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary:after {
+        content: "+";
+        color: var(--red);
+        font-size: 23px;
+        line-height: 1;
+      }
+      details[open] summary:after {
+        content: "−";
+      }
+      details p {
+        padding-top: 12px;
+        font-size: 16px;
+      }
+      .disclaimer {
+        padding: 25px;
+        font-size: 11px;
+        line-height: 1.65;
+        color: rgb(170 170 170 / 75%);
+        background: #0c0c0e;
+      }
+      .disclaimer strong {
+        display: block;
+        color: rgb(255 69 75 / 70%);
+        letter-spacing: 1px;
+        font-size: 10px;
+        margin-bottom: 7px;
+      }
+      .policy-links {
+        padding: 12px 10px 22px;
+        display: flex;
+        justify-content: center;
+        gap: 9px;
+        flex-wrap: wrap;
+        background: #07050a;
+      }
+      .policy-links button {
+        border: 0;
+        background: none;
+        font-size: 9px;
+        color: rgb(170 170 170 / 75%);
+        padding: 3px;
+      }
+      .policy-links button:hover,
+      .policy-links button:focus-visible {
+        color: #ccc;
+      }
+      /* Quiet, compact footer details */
+      #disclaimer {
+        margin-top: 8px;
+        padding: 18px clamp(16px, 4vw, 42px) 12px;
+        border-top: 1px solid #ffffff0d;
+        color: rgba(210, 198, 205, .34);
+        font-size: 9px;
+        line-height: 1.55;
+        text-align: center;
+      }
+      #disclaimer strong {
+        color: rgba(255, 120, 165, .42);
+        font-size: 8px;
+        letter-spacing: .14em;
+      }
+      #disclaimer p { max-width: 760px; margin: 0 auto; }
+      .policy-links {
+        padding: 10px 12px 18px;
+        gap: 6px 12px;
+        border-top: 0;
+        background: #08070a;
+      }
+      #faqs,
+      #faqs + #disclaimer {
+        border-bottom: 0;
+      }
+      #faqs + #disclaimer { margin-top: 0; }
+      .policy-links button {
+        font-size: 9px;
+        color: rgba(190, 177, 185, .38);
+      }
+      .sticky {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 115%);
+        max-width: var(--w);
+        width: 100%;
+        padding: 10px 18px max(10px, env(safe-area-inset-bottom));
+        background: #101012ed;
+        border-top: 1px solid var(--line);
+        z-index: 80;
+        visibility: hidden;
+        transition: transform 0.25s;
+      }
+      .sticky.show {
+        transform: translate(-50%, 0);
+        visibility: visible;
+      }
+      .sticky a {
+        display: block;
+        background: #e34a91;
+        text-align: center;
+        padding: 11px;
+        border-radius: 9px;
+        font-weight: 700;
+      }
+      .loading {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: #000b;
+        z-index: 300;
+      }
+      .loading.show {
+        display: flex;
+      }
+      .loading-box {
+        background: #19191b;
+        padding: 24px;
+        border-radius: 16px;
+      }
+      .spinner {
+        width: 36px;
+        height: 36px;
+        margin: 0 auto 12px;
+        border: 3px solid #444;
+        border-top-color: var(--red);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @media (max-width: 360px) {
+        section {
+          padding: 30px 18px;
+        }
+        h1,
+        h2 {
+          font-size: 30px;
+        }
+        .tile {
+          padding: 15px 12px;
+        }
+        .grid {
+          gap: 9px;
+        }
+        .tile h3 {
+          font-size: 19px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *:before,
+        *:after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+      /* Match the original landing page width and compact vertical spacing. */
+      :root {
+        --w: 450px;
+      }
+      .page {
+        width: 100%;
+        min-height: 100vh;
+        padding-bottom: 65px;
+      }
+      section {
+        padding: 20px;
+      }
+      h1,
+      h2 {
+        font-size: 34px;
+        line-height: 1.22;
+        letter-spacing: -0.4px;
+      }
+      h3 {
+        font-size: 21px;
+        line-height: 1.3;
+      }
+      .eyebrow {
+        font-size: 18px;
+        letter-spacing: 1.4px;
+      }
+      .grid {
+        margin-top: 18px;
+      }
+      .tile {
+        padding: 17px;
+      }
+      #problem-section > h2 {
+        margin-top: 5px;
+      }
+      .problem-timeline {
+        position: relative;
+        display: grid;
+        gap: 22px;
+        margin-top: 28px;
+        padding: 10px 0;
+        list-style: none;
+      }
+      .problem-timeline::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 50%;
+        width: 1px;
+        background: linear-gradient(
+          transparent,
+          #ff70ad80 5%,
+          #ff70ad80 95%,
+          transparent
+        );
+      }
+      .problem-item {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: 32px;
+        align-items: center;
+      }
+      .problem-item::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        transform: translate(-50%, -50%);
+        border: 1px solid #b75a60;
+        border-radius: 50%;
+        background: #170e10;
+        box-shadow: 0 0 0 4px #ff70ad0d;
+      }
+      .problem-item:first-child::after {
+        background: var(--red);
+        border-color: #ffd4d6;
+        box-shadow:
+          0 0 0 5px #ff70ad20,
+          0 0 16px #ff70ad65;
+      }
+      .problem-card {
+        position: relative;
+        grid-column: 1;
+        grid-row: 1;
+        overflow: hidden;
+        min-height: 124px;
+        aspect-ratio: 3 / 2;
+        background: #fffafb;
+        border: 1px solid #f4dfe2;
+        border-radius: 9px;
+        box-shadow:
+          0 0 22px #ff70ad16,
+          0 8px 24px #0005;
+      }
+      .problem-card img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .problem-label {
+        grid-column: 2;
+        grid-row: 1;
+        color: #d7c4c6;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      .problem-item:nth-child(even) .problem-card {
+        grid-column: 2;
+      }
+      .problem-item:nth-child(even) .problem-label {
+        grid-column: 1;
+        text-align: right;
+      }
+      @media (max-width: 360px) {
+        .problem-item {
+          column-gap: 24px;
+        }
+        .problem-label {
+          font-size: 16px;
+        }
+      }
+      .tile i {
+        margin-bottom: 12px;
+      }
+      .steps {
+        margin-top: 18px;
+      }
+      .step {
+        padding: 17px 0;
+      }
+      .checklist {
+        margin-top: 17px;
+        gap: 9px;
+      }
+      .cta {
+        margin-top: 18px;
+        padding: 13px 20px;
+      }
+      .section-head {
+        margin-bottom: 22px;
+      }
+      .form-card {
+        padding: 24px 18px;
+      }
+      .field {
+        margin-bottom: 14px;
+      }
+      .field input {
+        min-height: 48px;
+        padding: 9px 13px;
+      }
+      .review-note {
+        padding: 18px;
+        margin-top: 18px;
+      }
+      .disclaimer {
+        padding: 20px;
+      }
+      @media (max-width: 360px) {
+        section {
+          padding: 20px 15px;
+        }
+        .tile {
+          padding: 15px 12px;
+        }
+      }
+      .pp-overlay {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100dvh;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px;
+        background: rgba(13, 36, 27, 0.62);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .pp-overlay.show {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .pp-modal {
+        width: min(420px, calc(100vw - 28px));
+        max-height: 72dvh;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        touch-action: pan-y;
+        -webkit-overflow-scrolling: touch;
+        background: #fff;
+        border-radius: 18px;
+        padding: 22px 17px;
+        position: relative;
+      }
+      .pp-close {
+        position: sticky;
+        top: 0;
+        float: right;
+        width: 30px;
+        height: 30px;
+        border: 0;
+        border-radius: 50%;
+        background: #e4eee8;
+        color: var(--green);
+        cursor: pointer;
+      }
+      .pp-title,
+      .pp-mtitle {
+        font:
+          700 21px "Halant",
+          serif;
+        color: var(--green);
+        margin: 2px 38px 8px 0;
+      }
+      .pp-mtitle i {
+        margin-right: 7px;
+        color: var(--leaf);
+      }
+      .pp-badge,
+      .pp-mbadge {
+        display: inline-block;
+        background: #e4eee8;
+        color: var(--green);
+        font-size: 10px;
+        border-radius: 999px;
+        padding: 3px 9px;
+        margin-bottom: 10px;
+      }
+      .pp-mpara {
+        margin: 7px 0;
+      }
+      .pp-modal p,
+      .pp-modal li {
+        font-size: 13px;
+        line-height: 1.65;
+        color: #4d504c;
+      }
+      .pp-modal ul {
+        padding-left: 18px;
+        margin: 8px 0;
+      }
+      .pp-note,
+      .pp-mhl {
+        background: #edf4ef;
+        border-left: 3px solid var(--leaf);
+        padding: 9px 10px;
+        border-radius: 0 8px 8px 0;
+        margin: 10px 0;
+        color: #35483d;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .pp-cgrid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+        margin-top: 12px;
+      }
+      .pp-citem {
+        min-width: 0;
+        padding: 12px 9px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fffdf7;
+        text-align: center;
+      }
+      .pp-citem > i {
+        color: var(--leaf);
+        font-size: 21px;
+      }
+      .pp-clbl {
+        margin-top: 5px;
+        color: var(--muted);
+        font-size: 10px;
+      }
+      .pp-cval {
+        overflow-wrap: anywhere;
+        color: var(--green);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      /* EarCare: use the original GathHeal V3 geometry. */
+      :root {
+        --red: #ff70ad;
+        --leaf: #ff70ad;
+      }
+      body,
+      .page {
+        background: #000;
+        color: #fff;
+      }
+      .banner {
+        position: relative;
+        aspect-ratio: 941 / 1671;
+        background: radial-gradient(ellipse at center, #321423, #050505 75%);
+      }
+      .banner-placeholder {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        color: white;
+      }
+      .banner-placeholder > span {
+        font-size: 48px;
+        font-weight: 700;
+      }
+      .banner-placeholder small {
+        color: #dcb8cb;
+      }
+      .hero-copy {
+        position: absolute;
+        inset: auto 0 0;
+        padding: 22px 20px;
+        background: linear-gradient(transparent, #080508 30%);
+      }
+      .hero-copy .eyebrow {
+        font-size: 14px;
+      }
+      .hero-copy h1 {
+        font-size: 28px;
+        line-height: 1.3;
+      }
+      .hero-copy p {
+        font-size: 15px;
+        line-height: 1.55;
+        margin-top: 12px;
+      }
+      .hero-copy .cta {
+        display: none;
+      }
+      .hero-banner {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .visual-slot {
+        display: grid;
+        place-items: center;
+        background: radial-gradient(ellipse, #321826, #110c10);
+        color: var(--red);
+      }
+      .visual-slot > i {
+        font-size: 54px;
+      }
+      .problem-card {
+        border-color: #60334a;
+      }
+      .problem-label {
+        color: white;
+      }
+      .pack-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 160px;
+        height: 220px;
+        margin: auto;
+        border: 1px solid #b96289;
+        border-radius: 18px 18px 30px 30px;
+        background: linear-gradient(120deg, #321523, #100c0f 60%, #472033);
+        text-align: center;
+      }
+      .pack-placeholder strong {
+        font-size: 32px;
+        color: white;
+      }
+      .pack-placeholder strong span {
+        color: var(--red);
+      }
+      .pack-placeholder small {
+        font-size: 11px;
+        letter-spacing: 2px;
+        margin-top: 20px;
+        color: white;
+      }
+      .product-image-slot {
+        background: transparent;
+      }
+      .product-showcase figcaption strong span {
+        color: var(--red);
+      }
+      .final-cta-showcase {
+        height: 280px;
+        display: grid;
+        place-items: center;
+      }
+      .final-pack {
+        height: 260px;
+        width: 180px;
+      }
+      textarea {
+        width: 100%;
+        font: inherit;
+        background: #09090b;
+        color: white;
+        padding: 10px 13px;
+        border: 1px solid #424247;
+        border-radius: 9px;
+        resize: vertical;
+      }
+      .query-details {
+        margin-bottom: 14px;
+      }
+      .query-details summary {
+        font-size: 15px;
+        padding: 7px 0;
+        cursor: pointer;
+      }
+      .daily-list article {
+        padding: 12px 0;
+      }
+      .daily-list h3 {
+        font-size: 18px;
+        color: var(--red);
+      }
+      .daily-list p {
+        font-size: 15px;
+      }
+      .certificate-image.visual-slot {
+        color: var(--red);
+      }
+      .certificate-card {
+        opacity: 1;
+        transform: none;
+      }
+      .certificate-card small {
+        white-space: normal;
+      }
+      .review-empty {
+        margin-top: 14px;
+      }
+      .pp-overlay {
+        background: rgba(0, 0, 0, 0.78);
+      }
+      .pp-modal {
+        background: #100c0f;
+        border: 1px solid #60354a;
+        color: white;
+      }
+      .pp-title,
+      .pp-mtitle,
+      .pp-cval,
+      .pp-modal p,
+      .pp-modal li {
+        color: white;
+      }
+      .pp-close,
+      .pp-badge,
+      .pp-mbadge {
+        background: #301522;
+        color: #ff9fc8;
+      }
+      .pp-note,
+      .pp-mhl,
+      .pp-citem {
+        background: #1b1016;
+        color: white;
+      }
+      #order-dialog {
+        width: min(420px, calc(100% - 28px));
+        max-height: 88dvh;
+        margin: auto;
+        padding: 24px 18px;
+        border: 1px solid #76445b;
+        border-radius: 18px;
+        color: white;
+        background: #0d090c;
+        overflow: auto;
+        overscroll-behavior: contain;
+      }
+      #order-dialog::backdrop {
+        background: rgba(0, 0, 0, 0.8);
+      }
+      #order-dialog .form-card {
+        margin-top: 20px;
+      }
+      .order-close {
+        float: right;
+        width: 36px;
+        height: 36px;
+        border: 1px solid #76445b;
+        border-radius: 50%;
+        background: #28111d;
+        color: white;
+        font-size: 24px;
+      }
+      body.order-popup-open {
+        overflow: hidden;
+      }
+      .disclaimer strong {
+        color: var(--red);
+      }
+      #problem-section {
+        display: none;
+      }
+      /* How EarCare Works: circular visual with a rectangular text panel. */
+      #how-it-works .support-grid { gap: 22px; grid-auto-rows:1fr; }
+      #how-it-works .support-card { display:grid; grid-template-columns:150px minmax(0,1fr); align-items:center; min-height:150px; padding:0; filter:none; }
+      #how-it-works .support-card::before { display:none; }
+      #how-it-works .support-image, #how-it-works .support-card:nth-child(even) .support-image { grid-column:1; grid-row:1; width:150px; height:150px; padding:0; border:2px solid #ff70ad; border-radius:50%; clip-path:circle(49% at 50% 50%); background:radial-gradient(circle,#4a1d39,#160c16); box-shadow:0 0 0 7px #ff70ad12,0 12px 24px #0007; }
+      #how-it-works .support-photo { display:grid; place-items:center; width:100%; height:100%; margin:0; border-radius:50%; background:transparent; }
+      #how-it-works .support-photo > i { font-size:46px; color:#ff9fc8; }
+      #how-it-works .support-photo > i { display:none; }
+      #how-it-works .support-card:nth-child(1) .support-photo { background-image:url("images/work1.avif"); }
+      #how-it-works .support-card:nth-child(2) .support-photo { background-image:url("images/work2.webp"); }
+      #how-it-works .support-card:nth-child(3) .support-photo { background-image:url("images/work3.jpg"); }
+      #how-it-works .support-card:nth-child(4) .support-photo { background-image:url("images/work4.jpg"); }
+      #how-it-works .support-photo { background-position:center; background-size:cover; background-repeat:no-repeat; filter:saturate(1.08) contrast(1.04) brightness(1.04); }
+      #how-it-works .support-photo > i { opacity:.75; }
+      #how-it-works .support-copy, #how-it-works .support-card:nth-child(even) .support-copy { grid-column:1/-1; grid-row:1; margin:0 0 0 76px; min-height:108px; padding:20px 18px 20px 78px; border:1px solid #60344f; border-radius:14px; background:linear-gradient(100deg,#1f111d,#100b10 82%); text-align:left; }
+      #how-it-works .support-card:nth-child(even) .support-copy { margin:0 76px 0 0; padding:20px 78px 20px 18px; text-align:right; background:linear-gradient(260deg,#1f111d,#100b10 82%); }
+      #how-it-works .support-copy::after, #how-it-works .support-card:nth-child(even) .support-copy::after { inset:0 0 0 auto; width:3px; border-radius:0 14px 14px 0; background:#ff70ad; }
+      #how-it-works .support-card:nth-child(even) .support-copy::after { inset:0 auto 0 0; border-radius:14px 0 0 14px; }
+      #how-it-works .support-card h3 { font-size:18px; color:#fff; }
+      #how-it-works .support-card p { margin-top:7px; font-size:14px; color:#cdbbc6; }
+      /* Even cards mirror the composition: text panel left, circle right. */
+      #how-it-works .support-card:nth-child(even) { grid-template-columns:minmax(0,1fr) 150px; }
+      #how-it-works .support-card:nth-child(even) .support-image { grid-column:2; }
+      #how-it-works .support-card:nth-child(even) .support-copy { grid-column:1/-1; grid-row:1; margin:0 76px 0 0; padding:20px 78px 20px 18px; text-align:left; background:linear-gradient(260deg,#1f111d,#100b10 82%); }
+      #how-it-works .support-card:nth-child(even) .support-copy::after { inset:0 auto 0 0; border-radius:14px 0 0 14px; }
+      @media (max-width:420px) {
+        #how-it-works .support-card { grid-template-columns:108px minmax(0,1fr); min-height:108px; }
+        #how-it-works .support-image, #how-it-works .support-card:nth-child(even) .support-image { width:108px; height:108px; }
+        #how-it-works .support-copy, #how-it-works .support-card:nth-child(even) .support-copy { min-height:92px; margin-left:50px; padding:14px 12px 14px 56px; }
+        #how-it-works .support-card:nth-child(even) .support-copy { margin-right:50px; padding:14px 56px 14px 12px; }
+        #how-it-works .support-card:nth-child(even) { grid-template-columns:minmax(0,1fr) 108px; }
+        #how-it-works .support-card:nth-child(even) .support-image { grid-column:2; }
+        #how-it-works .support-card:nth-child(even) .support-copy { grid-column:1/-1; grid-row:1; margin:0 50px 0 0; padding:14px 56px 14px 12px; text-align:left; }
+        #how-it-works .support-card h3 { font-size:15px; }
+        #how-it-works .support-card p { font-size:12px; }
+      }
+      .problem-roadmap {
+        padding-block: 34px;
+        background: linear-gradient(180deg, #0d0a0e, #080708);
+      }
+      .problem-roadmap > .eyebrow {
+        margin-bottom: 10px;
+        text-align: center;
+        color: var(--red);
+      }
+      .problem-roadmap > h2 {
+        max-width: 440px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: clamp(25px, 6vw, 34px);
+        line-height: 1.3;
+      }
+      .roadmap-flow {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 16px;
+        margin-top: 30px;
+      }
+      .roadmap-item {
+        position: relative;
+        display: block;
+        min-width: 0;
+      }
+      .roadmap-dot {
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        left: 10px;
+        display: grid;
+        place-items: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ff70ad;
+        border-radius: 50%;
+        background: #1d0f19;
+        color: #ff9fc8;
+        font-size: 10px;
+        font-weight: 700;
+      }
+      .roadmap-item > div {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        min-height: 188px;
+        padding: 18px 14px;
+        border: 1px solid #8d4a70;
+        border-radius: 14px 14px 46% 46% / 14px 14px 22% 22%;
+        background-color: #130e13;
+        background-image:
+          linear-gradient(
+            0deg,
+            rgba(11, 7, 12, 0.96) 0%,
+            rgba(11, 7, 12, 0.58) 48%,
+            rgba(11, 7, 12, 0.1) 100%
+          ),
+          url("images/banner.png");
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 10px 20px #0006;
+      }
+      .roadmap-item:nth-child(1) > div {
+        background-position: 18% center;
+      }
+      .roadmap-item:nth-child(2) > div {
+        background-position: 32% center;
+      }
+      .roadmap-item:nth-child(3) > div {
+        background-position: 46% center;
+      }
+      .roadmap-item:nth-child(4) > div {
+        background-position: 60% center;
+      }
+      .roadmap-item:nth-child(5) > div {
+        background-position: 72% center;
+      }
+      .roadmap-item:nth-child(6) > div {
+        background-position: 84% center;
+      }
+      .roadmap-item:nth-child(7) > div {
+        background-position: center;
+      }
+      .roadmap-item:nth-child(1) > div {
+        background-image:
+          linear-gradient(0deg, rgba(11, 7, 12, 0.82), rgba(11, 7, 12, 0.12)),
+          url("images/problem1.webp");
+      }
+      .roadmap-item:nth-child(2) > div {
+        background-image:
+          linear-gradient(0deg, rgba(11, 7, 12, 0.82), rgba(11, 7, 12, 0.12)),
+          url("images/problem2.jpg");
+      }
+      .roadmap-item:nth-child(3) > div {
+        background-image:
+          linear-gradient(0deg, rgba(11, 7, 12, 0.82), rgba(11, 7, 12, 0.12)),
+          url("images/problem3.jpeg");
+      }
+      .roadmap-item:nth-child(4) > div {
+        background-image:
+          linear-gradient(0deg, rgba(11, 7, 12, 0.82), rgba(11, 7, 12, 0.12)),
+          url("images/problem4.jpg");
+      }
+      .roadmap-item:nth-child(5) > div {
+        background-image:
+          linear-gradient(0deg, rgba(11, 7, 12, 0.82), rgba(11, 7, 12, 0.12)),
+          url("images/problem5.webp");
+      }
+      .roadmap-item:nth-child(6) > div {
+        background-image:
+          linear-gradient(0deg, rgba(11, 7, 12, 0.82), rgba(11, 7, 12, 0.12)),
+          url("images/problem6.jpg");
+      }
+      .roadmap-item:nth-child(7) > div {
+        background-image:
+          linear-gradient(0deg, rgba(11, 7, 12, 0.82), rgba(11, 7, 12, 0.12)),
+          url("images/problem7.png");
+      }
+      .roadmap-item:nth-child(7) {
+        display: none;
+      }
+      .roadmap-item > div::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        border: 1px solid #ff70ad22;
+        border-radius: inherit;
+      }
+      .roadmap-item h3 {
+        position: relative;
+        z-index: 1;
+        font-size: 16px;
+        line-height: 1.35;
+        color: #fff;
+        text-align: center;
+      }
+      .roadmap-item p {
+        display: none;
+      }
+      .roadmap-dot {
+        display: none;
+      }
+      .product-art {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 18px 16px #0008);
+      }
+      .product-art:not([hidden]) + .pack-placeholder {
+        display: none;
+      }
+      .product-description {
+        max-width: 440px;
+        margin-inline: auto;
+        text-align: center;
+      }
+      #product-intro .product-features {
+        margin-top: 24px;
+      }
+      #product-intro > .cta {
+        max-width: 360px;
+        margin: 24px auto 0;
+      }
+
+      /* Uniform section title and subtitle pattern. */
+      main.page > section:not(.banner) > .eyebrow,
+      main.page > section:not(.banner) > .section-head > .eyebrow {
+        margin: 0 auto 11px;
+        color: #ff70ad;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        line-height: 1.4;
+        text-align: center;
+      }
+      main.page > section:not(.banner) > h2,
+      main.page > section:not(.banner) > .section-head > h2 {
+        width: min(100%, 450px);
+        margin: 0 auto;
+        color: #fff;
+        font-size: clamp(25px, 5.8vw, 34px);
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.25px;
+        text-align: center;
+        text-wrap: balance;
+      }
+      main.page > section:not(.banner) > h2::after,
+      main.page > section:not(.banner) > .section-head > h2::after {
+        display: none;
+      }
+      main.page > section:not(.banner) > p:first-of-type {
+        max-width: 430px;
+        margin: 14px auto 0;
+        text-align: center;
+      }
+      /* Final heading alignment: every section uses a large centered title. */
+      main.page section:not(.banner) h2,
+      main.page section:not(.banner) .section-head h2 {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        font-size: clamp(29px, 6.4vw, 38px) !important;
+        line-height: 1.28;
+        text-align: center !important;
+        text-wrap: balance;
+      }
+      main.page section:not(.banner) h2::before,
+      main.page section:not(.banner) h2::after,
+      main.page section:not(.banner) .section-head h2::before,
+      main.page section:not(.banner) .section-head h2::after {
+        content: none !important;
+        display: none !important;
+      }
+      /* Reference-style section hierarchy: label, headline, then supporting copy. */
+      main.page section:not(.banner) > .eyebrow,
+      main.page section:not(.banner) > .section-head > .eyebrow {
+        display: block;
+        margin: 0 auto 12px;
+        color: #ff70ad;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        line-height: 1.3;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      main.page section:not(.banner) h2,
+      main.page section:not(.banner) .section-head h2 {
+        margin-inline: auto;
+        font-size: clamp(30px, 6.8vw, 30px) !important;
+        font-weight: 700;
+        line-height: 1.22;
+        letter-spacing: -0.45px;
+        text-align: center !important;
+      }
+      main.page section:not(.banner) > p:first-of-type,
+      main.page section:not(.banner) > .section-head + p,
+      main.page section:not(.banner) .product-subtitle {
+        max-width: 460px;
+        margin: 14px auto 0;
+        color: #c9bcc4;
+        font-size: 18px;
+        line-height: 1.55;
+        text-align: center;
+      }
+      @media (max-width: 420px) {
+        main.page > section:not(.banner) > .eyebrow,
+        main.page > section:not(.banner) > .section-head > .eyebrow {
+          font-size: 12px;
+        }
+        main.page section:not(.banner) h2,
+        main.page section:not(.banner) .section-head h2 {
+          font-size: 30px !important;
+        }
+        main.page section:not(.banner) > .eyebrow,
+        main.page section:not(.banner) > .section-head > .eyebrow {
+          font-size: 12px;
+          letter-spacing: 1.5px;
+        }
+        main.page section:not(.banner) > p:first-of-type,
+        main.page section:not(.banner) > .section-head + p,
+        main.page section:not(.banner) .product-subtitle {
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 420px) {
+        .problem-roadmap {
+          padding-block: 28px;
+        }
+        .problem-roadmap > h2 {
+          font-size: 26px;
+        }
+        .roadmap-flow {
+          gap: 14px 10px;
+          margin-top: 24px;
+        }
+        .roadmap-flow::before {
+          display: none;
+        }
+        .roadmap-item {
+          display: block;
+        }
+        .roadmap-dot {
+          top: 7px;
+          left: 7px;
+          width: 26px;
+          height: 26px;
+          font-size: 9px;
+        }
+        .roadmap-item > div {
+          min-height: 150px;
+          padding: 14px 9px;
+          border-radius: 11px 11px 44% 44% / 11px 11px 18% 18%;
+        }
+        .roadmap-item h3 {
+          font-size: 14px;
+        }
+        .roadmap-item p {
+          font-size: 12px;
+        }
+      }
+      @media (max-width: 380px) {
+        #problem-section h2,
+        #product-intro h2,
+        #how-it-works h2,
+        #quality h2,
+        #order-form h2 {
+          font-size: 30px;
+        }
+        .product-description,
+        .product > p {
+          font-size: 16px;
+        }
+      }
+      /* Product and callouts share one composition, including on phones. */
+      #product-intro .earcare-poster {
+        margin-top: 26px;
+        padding: 20px 0 0;
+        overflow: hidden;
+        border: 1px solid #563045;
+        border-radius: 20px;
+        background: radial-gradient(
+          ellipse at 12% 55%,
+          #331426,
+          #130c12 64%,
+          #0b090b
+        );
+      }
+      .earcare-poster-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 0 18px;
+      }
+      .earcare-wordmark {
+        color: #fff;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -1px;
+      }
+      .earcare-wordmark > span {
+        color: #ff70ad;
+      }
+      .earcare-poster-label {
+        color: #ddbdcf;
+        font-size: 9px;
+        line-height: 1.5;
+        letter-spacing: 1.4px;
+        text-align: right;
+      }
+      .earcare-orbit {
+        position: relative;
+        aspect-ratio: 1 / 1.05;
+        margin-top: 20px;
+        isolation: isolate;
+      }
+      .earcare-orbit-disc {
+        position: absolute;
+        width: 86%;
+        height: 86%;
+        left: -22%;
+        top: 7%;
+        overflow: hidden;
+        border: 1px solid #f691c0;
+        border-radius: 50%;
+        background: #29121f;
+        box-shadow: 0 0 24px #ff70ad18;
+      }
+      .earcare-orbit-disc::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        border-radius: inherit;
+        box-shadow: inset 0 0 22px #160b1640;
+      }
+      .earcare-orbit-product {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 42% center;
+        transform: none;
+      }
+      .earcare-callouts {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        inset: 0;
+      }
+      .earcare-callouts li {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        width: 52%;
+        left: 45%;
+        min-width: 0;
+      }
+      .earcare-callouts li:nth-child(1) {
+        top: 7%;
+        left: 40%;
+      }
+      .earcare-callouts li:nth-child(2) {
+        top: 31%;
+        left: 55%;
+        width: 44%;
+      }
+      .earcare-callouts li:nth-child(3) {
+        top: 57%;
+        left: 55%;
+        width: 44%;
+      }
+      .earcare-callouts li:nth-child(4) {
+        top: 81%;
+        left: 40%;
+      }
+      .earcare-callout-icon {
+        display: grid;
+        place-items: center;
+        flex: 0 0 clamp(36px, 11vw, 52px);
+        width: clamp(36px, 11vw, 52px);
+        height: clamp(36px, 11vw, 52px);
+        border-radius: 50%;
+        background: #ffe3f0;
+        color: #8d285a;
+        border: 1px solid #ff93c2;
+        box-shadow: 0 4px 14px #0004;
+      }
+      .earcare-callout-icon svg {
+        width: 56%;
+        height: 56%;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .earcare-callouts strong {
+        display: block;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.35;
+      }
+      .earcare-callouts small {
+        display: block;
+        margin-top: 3px;
+        color: #e4b6cc;
+        font-size: 11px;
+        line-height: 1.4;
+      }
+      .earcare-poster-note {
+        margin: 16px 18px 20px;
+        padding-top: 16px;
+        border-top: 1px solid #ffffff15;
+        color: #cfbbc6;
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: center;
+      }
+      @media (max-width: 380px) {
+        .earcare-poster-header {
+          padding-inline: 14px;
+        }
+        .earcare-wordmark {
+          font-size: 25px;
+        }
+        .earcare-poster-label {
+          font-size: 8px;
+          letter-spacing: 1px;
+        }
+        .earcare-callouts li {
+          gap: 6px;
+        }
+        .earcare-callouts strong {
+          font-size: 14px;
+        }
+        .earcare-callouts small {
+          font-size: 10px;
+        }
+        .earcare-callout-icon {
+          flex-basis: 34px;
+          width: 34px;
+          height: 34px;
+        }
+        .earcare-poster-note {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section id="home" class="banner hero">
+        <img
+          class="hero-banner"
+          src="images/banner.png"
+          alt="EarCare Ayurvedic Herbal Powder banner"
+          width="941"
+          height="1671"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </section>
+      <section id="problem-roadmap" class="problem-roadmap">
+        <div class="eyebrow">समस्या को समझें</div>
+        <h2>कानों की परेशानी दिनचर्या को प्रभावित कर सकती है</h2>
+        <div class="roadmap-flow">
+          <article class="roadmap-item">
+            <span class="roadmap-dot">01</span>
+            <div>
+              <h3>कान से मवाद या पानी आना</h3>
+              <p>
+                कान से किसी भी तरह का discharge दिखाई दे तो उसे नज़रअंदाज़ न
+                करें।
+              </p>
+            </div>
+          </article>
+          <article class="roadmap-item">
+            <span class="roadmap-dot">02</span>
+            <div>
+              <h3>आवाज़ कम या धीमी सुनाई देना</h3>
+              <p>बातचीत, फोन या आसपास की आवाज़ समझने में परेशानी हो सकती है।</p>
+            </div>
+          </article>
+          <article class="roadmap-item">
+            <span class="roadmap-dot">03</span>
+            <div>
+              <h3>घंटी, सीटी या गूंज जैसी आवाज़</h3>
+              <p>कानों में लगातार या बार-बार ऐसी आवाज़ महसूस हो सकती है।</p>
+            </div>
+          </article>
+          <article class="roadmap-item">
+            <span class="roadmap-dot">04</span>
+            <div>
+              <h3>भारीपन या दबाव महसूस होना</h3>
+              <p>
+                कानों में fullness, दबाव या असहजता रोज़मर्रा को प्रभावित कर सकती
+                है।
+              </p>
+            </div>
+          </article>
+          <article class="roadmap-item">
+            <span class="roadmap-dot">05</span>
+            <div>
+              <h3>तेज़ आवाज़ के बाद असहजता</h3>
+              <p>
+                लाउड म्यूज़िक या शोर के बाद कान संवेदनशील महसूस हो सकते हैं।
+              </p>
+            </div>
+          </article>
+          <article class="roadmap-item">
+            <span class="roadmap-dot">06</span>
+            <div>
+              <h3>बातचीत और कामों में परेशानी</h3>
+              <p>
+                लोगों से बात करने और रोज़मर्रा के काम पूरे करने में दिक्कत हो
+                सकती है।
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="problem-section" class="">
+        <div class="eyebrow">समस्या को समझें</div>
+        <h2>रोज़मर्रा की आदतें कानों को प्रभावित कर सकती हैं</h2>
+        <div class="problem-timeline">
+          <article class="problem-item">
+            <div class="problem-card visual-slot">
+              <i class="ti ti-headphones" aria-hidden="true"></i>
+            </div>
+            <h3 class="problem-label">
+              लंबे समय तक headphones या earphones का इस्तेमाल
+            </h3>
+          </article>
+          <article class="problem-item">
+            <div class="problem-card visual-slot">
+              <i class="ti ti-volume" aria-hidden="true"></i>
+            </div>
+            <h3 class="problem-label">तेज़ आवाज़ वाले वातावरण में रहना</h3>
+          </article>
+          <article class="problem-item">
+            <div class="problem-card visual-slot">
+              <i class="ti ti-wind" aria-hidden="true"></i>
+            </div>
+            <h3 class="problem-label">धूल और प्रदूषण के संपर्क में आना</h3>
+          </article>
+          <article class="problem-item">
+            <div class="problem-card visual-slot">
+              <i class="ti ti-ear" aria-hidden="true"></i>
+            </div>
+            <h3 class="problem-label">कानों में असहजता महसूस होना</h3>
+          </article>
+          <article class="problem-item">
+            <div class="problem-card visual-slot">
+              <i class="ti ti-heart" aria-hidden="true"></i>
+            </div>
+            <h3 class="problem-label">
+              कानों की नियमित देखभाल को नज़रअंदाज़ करना
+            </h3>
+          </article>
+        </div>
+      </section>
+      <section id="product-intro" class="product">
+        <div class="eyebrow">AYURVEDIC DAILY CARE</div>
+        <h2>EarCare <span class="accent">Herbal Powder</span></h2>
+        <div class="earcare-poster">
+          <div class="earcare-poster-header">
+            <span class="earcare-wordmark">Ear<span>Care</span></span
+            ><span class="earcare-poster-label"
+              >EVERYDAY<br />EAR WELLNESS</span
+            >
+          </div>
+          <div class="earcare-orbit">
+            <div class="earcare-orbit-disc">
+              <img
+                class="earcare-orbit-product"
+                src="images/product.avif"
+                alt="EarCare Ayurvedic Herbal Powder"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <ul class="earcare-callouts" aria-label="Product features">
+              <li>
+                <span class="earcare-callout-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 32 32">
+                    <path
+                      d="M7 24C2 10 14 6 26 6c0 12-4 22-16 18M7 27 23 11M13 21v-8m0 8h8"
+                    /></svg></span
+                ><span
+                  ><strong>पारंपरिक</strong><small>Herbal blend</small></span
+                >
+              </li>
+              <li>
+                <span class="earcare-callout-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 32 32">
+                    <path
+                      d="m6 10 10-5 10 5v13l-10 5-10-5Zm0 0 10 5 10-5M16 15v13M11 7.5l10 5"
+                    /></svg></span
+                ><span><strong>आसान</strong><small>Powder format</small></span>
+              </li>
+              <li>
+                <span class="earcare-callout-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 32 32">
+                    <rect x="5" y="7" width="22" height="21" rx="3" />
+                    <path
+                      d="M10 4v6m12-6v6M5 14h22m-16 7 3 3 7-7"
+                    /></svg></span
+                ><span
+                  ><strong>दैनिक</strong><small>Wellness routine</small></span
+                >
+              </li>
+              <li>
+                <span class="earcare-callout-icon" aria-hidden="true"
+                  ><svg viewBox="0 0 32 32">
+                    <path
+                      d="M9 5h11l5 5v17H7V5Zm10 0v7h6M11 17h10m-10 5h7"
+                    /></svg></span
+                ><span
+                  ><strong>सरल उपयोग</strong
+                  ><small>Label के अनुसार</small></span
+                >
+              </li>
+            </ul>
+          </div>
+          <p class="earcare-poster-note">
+            पारंपरिक Ayurvedic herbs से तैयार powder format, जिसे product label
+            के निर्देशों के अनुसार अपनी routine में शामिल करें।
+          </p>
+        </div>
+      </section>
+      <section id="how-it-works" class="">
+        <div class="eyebrow">HOW EARCARE WORKS</div>
+        <h2>रोज़मर्रा की <span class="accent">देखभाल के लिए</span></h2>
+        <div class="support-grid">
+          <article class="support-card">
+            <div class="support-image">
+              <div class="support-photo visual-slot">
+                <i class="ti ti-leaf" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="support-copy">
+              <h3>Natural Herbal Nourishment</h3>
+              <p>
+                पारंपरिक Ayurvedic herbs कानों की सामान्य देखभाल को support करती
+                हैं।
+              </p>
+            </div>
+          </article>
+          <article class="support-card">
+            <div class="support-image">
+              <div class="support-photo visual-slot">
+                <i class="ti ti-ear" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="support-copy">
+              <h3>Everyday Ear Care</h3>
+              <p>EarCare आपके कानों की रोज़ाना देखभाल और comfort routine का सरल हिस्सा है।</p>
+            </div>
+          </article>
+          <article class="support-card">
+            <div class="support-image">
+              <div class="support-photo visual-slot">
+                <i class="ti ti-headphones" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="support-copy">
+              <h3>Healthy Hearing Support</h3>
+              <p>
+                यह कानों के healthy hearing function को support करने में मदद करता है।
+              </p>
+            </div>
+          </article>
+          <article class="support-card">
+            <div class="support-image">
+              <div class="support-photo visual-slot">
+                <i class="ti ti-heart" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="support-copy">
+              <h3>Overall Ear Wellness</h3>
+              <p>
+                नियमित routine के साथ अपने कानों की overall wellness को support करें।
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="ingredients" class="">
+        <div class="eyebrow">INGREDIENTS</div>
+        <h2>चुनिंदा Ayurvedic Herbs</h2>
+        <p>
+          EarCare में पारंपरिक रूप से इस्तेमाल की जाने वाली herbal ingredients
+          शामिल हैं:
+        </p>
+        <div class="ingredient-grid">
+          <!-- Add your ingredient photos at these paths, or update each src below. -->
+          <article class="herb">
+            <div class="herb-image">
+              <span class="herb-placeholder" aria-hidden="true">Neem image</span>
+              <img src="images/ing1.webp" alt="Neem leaves" loading="lazy" decoding="async" onerror="this.style.display='none'" onload="this.style.display='block';this.previousElementSibling.hidden=true">
+            </div>
+            <h3>Neem</h3>
+          </article>
+          <article class="herb">
+            <div class="herb-image">
+              <span class="herb-placeholder" aria-hidden="true">Giloy image</span>
+              <img src="images/ing2.jpg" alt="Giloy" loading="lazy" decoding="async" onerror="this.style.display='none'" onload="this.style.display='block';this.previousElementSibling.hidden=true">
+            </div>
+            <h3>Giloy</h3>
+          </article>
+          <article class="herb">
+            <div class="herb-image">
+              <span class="herb-placeholder" aria-hidden="true">Brahmi image</span>
+              <img src="images/ing3.jpg" alt="Brahmi leaves" loading="lazy" decoding="async" onerror="this.style.display='none'" onload="this.style.display='block';this.previousElementSibling.hidden=true">
+            </div>
+            <h3>Brahmi</h3>
+          </article>
+          <article class="herb">
+            <div class="herb-image">
+              <span class="herb-placeholder" aria-hidden="true">Turmeric image</span>
+              <img src="images/ing4.avif" alt="Turmeric" loading="lazy" decoding="async" onerror="this.style.display='none'" onload="this.style.display='block';this.previousElementSibling.hidden=true">
+            </div>
+            <h3>Turmeric</h3>
+          </article>
+          <article class="herb">
+            <div class="herb-image">
+              <span class="herb-placeholder" aria-hidden="true">Garlic image</span>
+              <img src="images/ing5.webp" alt="Garlic" loading="lazy" decoding="async" onerror="this.style.display='none'" onload="this.style.display='block';this.previousElementSibling.hidden=true">
+            </div>
+            <h3>Garlic</h3>
+          </article>
+          <article class="herb">
+            <div class="herb-image">
+              <span class="herb-placeholder" aria-hidden="true">Tulsi image</span>
+              <img src="images/ing6.jpg" alt="Tulsi leaves" loading="lazy" decoding="async" onerror="this.style.display='none'" onload="this.style.display='block';this.previousElementSibling.hidden=true">
+            </div>
+            <h3>Tulsi</h3>
+          </article>
+        </div>
+      </section>
+
+      <section id="quality" class="quality">
+        <div class="eyebrow">QUALITY</div>
+        <h2>Clear Quality Information</h2>
+        <!-- Replace each src with your own corresponding quality image. -->
+        <div class="quality-grid">
+          <figure class="quality-tile">
+            <div class="quality-art">
+              <span aria-hidden="true">GMP image</span>
+              <img src="images/cert1.jpg" alt="GMP" loading="lazy" decoding="async" onerror="this.hidden=true" onload="this.hidden=false;this.previousElementSibling.hidden=true">
+            </div>
+            <figcaption>GMP</figcaption>
+          </figure>
+          <figure class="quality-tile">
+            <div class="quality-art">
+              <span aria-hidden="true">ISO image</span>
+              <img src="images/cert2.webp" alt="ISO" loading="lazy" decoding="async" onerror="this.hidden=true" onload="this.hidden=false;this.previousElementSibling.hidden=true">
+            </div>
+            <figcaption>ISO</figcaption>
+          </figure>
+          <figure class="quality-tile">
+            <div class="quality-art">
+              <span aria-hidden="true">FSSAI image</span>
+              <img src="images/cert3.jpg" alt="FSSAI" loading="lazy" decoding="async" onerror="this.hidden=true" onload="this.hidden=false;this.previousElementSibling.hidden=true">
+            </div>
+            <figcaption>FSSAI</figcaption>
+          </figure>
+          <figure class="quality-tile">
+            <div class="quality-art">
+              <span aria-hidden="true">Quality Testing image</span>
+              <img src="images/cert4.jpg" alt="Quality Testing" loading="lazy" decoding="async" onerror="this.hidden=true" onload="this.hidden=false;this.previousElementSibling.hidden=true">
+            </div>
+            <figcaption>Quality Testing</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section id="start-routine" class="final-cta">
+        <h2>
+          कानों की देखभाल को<br /><span class="accent">अपनी routine बनाएं</span>
+        </h2>
+        <p>
+          सही जानकारी, नियमित देखभाल और product label के निर्देशों के साथ अपनी
+          ear wellness routine शुरू करें।
+        </p>
+        <div class="routine-product">
+          <img class="routine-bottle" src="images/capsule.png" alt="EarCare Herbal Powder bottle" loading="lazy" decoding="async" width="1254" height="1254" />
+          <div class="routine-info">
+            <div class="routine-rating" aria-label="Rated 4.9 out of 5">
+              <span class="rating-stars" aria-hidden="true">★★★★★</span>
+              <strong>4.9/5</strong>
+              <small>customer rating</small>
+            </div>
+            <div class="routine-trust" aria-label="Trusted by 82,000+ customers">
+              <span>Trusted by</span>
+              <strong>82,000+</strong>
+              <span>customers</span>
+            </div>
+          </div>
+        </div>
+        <a class="cta" href="#order-form">कानों की देखभाल शुरू करें</a>
+      </section>
+      <section id="order-form" class="">
+        <div class="section-head">
+          <div class="eyebrow">ORDER NOW</div>
+          <h2>EarCare की जानकारी और ऑर्डर के लिए</h2>
+        </div>
+        <div class="form-card" id="inline-order-card">
+          <form
+            id="orderForm"
+            method="post"
+            action="https://script.google.com/macros/s/AKfycbxT6e4aWhK8JTf9ebsb7OQgqvkRDXd1y5QQctOOkEnERqRnfzUv_6XF30E-9ne1Jwjx/exec"
+            accept-charset="UTF-8"
+            onsubmit="return submitForm(event);"
+          >
+            <input type="hidden" name="key" value="XQP4bdtEZkt3" />
+            <input
+              type="hidden"
+              name="product"
+              value="EarCare Ayurvedic Herbal Powder"
+            />
+            <input type="hidden" name="source" value="EarCare Website" />
+            <input type="hidden" name="date" id="date" />
+            <input type="hidden" name="event_id" id="event_id" />
+            <input type="hidden" name="page_url" id="page_url" />
+            <input type="hidden" name="referrer" id="referrer" />
+            <input type="hidden" name="utm_source" /><input
+              type="hidden"
+              name="utm_medium"
+            /><input type="hidden" name="utm_campaign" />
+            <input type="hidden" name="utm_campaign_id" /><input
+              type="hidden"
+              name="utm_adset"
+            /><input type="hidden" name="utm_adset_id" />
+            <input type="hidden" name="utm_ad" /><input
+              type="hidden"
+              name="utm_ad_id"
+            /><input type="hidden" name="utm_placement" />
+            <input type="hidden" name="fbclid" /><input
+              type="hidden"
+              name="fbc"
+            /><input type="hidden" name="fbp" />
+            <div class="field">
+              <label for="name">आपका नाम *</label
+              ><input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+                pattern="[A-Za-z\u0900-\u097F ]+"
+                placeholder="अपना पूरा नाम दर्ज करें"
+              />
+              <div class="err" id="nameError">कृपया पूरा नाम दर्ज करें।</div>
+            </div>
+            <div class="field">
+              <label for="phone">मोबाइल नंबर *</label
+              ><input
+                type="tel"
+                id="phone"
+                name="phone"
+                maxlength="10"
+                inputmode="numeric"
+                autocomplete="tel"
+                pattern="[6-9][0-9]{9}"
+                required
+                placeholder="अपना 10 अंकों का मोबाइल नंबर दर्ज करें"
+              />
+              <div class="err" id="phoneError">
+                कृपया सही 10 अंकों का नंबर दर्ज करें।
+              </div>
+            </div>
+            <button class="submit" id="submitBtn" type="submit">
+              जानकारी प्राप्त करें
+            </button>
+            <div class="secure">
+              🔒 Secure Contact · 📦 Delivery Details · ✅ Product Information
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="customer-reviews" class="">
+        <div class="eyebrow">CUSTOMER EXPERIENCE</div>
+        <h2>ग्राहकों के अनुभव</h2>
+          <div class="customer-reviews-list">
+            <!-- Add customer photos at these paths, or replace each src. -->
+            <article class="customer-review">
+              <header class="customer-review-header">
+                <div class="customer-photo">
+                  <span aria-hidden="true">NV</span>
+                  <img src="images/test1.jpg" alt="नेहा वर्मा" loading="lazy" decoding="async" onerror="this.hidden=true" onload="this.hidden=false;this.previousElementSibling.hidden=true">
+                </div>
+                <div><h3>नेहा वर्मा</h3><div class="customer-city">दिल्ली</div></div>
+              </header>
+              <blockquote><p>“लंबे समय तक काम करने के बाद कानों में थकान और असहजता महसूस होती थी। EarCare के नियमित उपयोग से कानों की परेशानी में आराम महसूस हुआ और बातचीत व रोज़मर्रा के काम अधिक सहज लगे।”</p></blockquote>
+            </article>
+            <article class="customer-review">
+              <header class="customer-review-header">
+                <div class="customer-photo">
+                  <span aria-hidden="true">RP</span>
+                  <img src="images/test2.jpg" alt="राजेश पटेल" loading="lazy" decoding="async" onerror="this.hidden=true" onload="this.hidden=false;this.previousElementSibling.hidden=true">
+                </div>
+                <div><h3>राजेश पटेल</h3><div class="customer-city">अहमदाबाद</div></div>
+              </header>
+              <blockquote><p>“कान में कभी-कभी discomfort के कारण ध्यान भटक जाता था। नियमित routine और EarCare के साथ मुझे अपने दिन को बेहतर तरीके से manage करने में मदद मिली।”</p></blockquote>
+            </article>
+            <article class="customer-review">
+              <header class="customer-review-header">
+                <div class="customer-photo">
+                  <span aria-hidden="true">PM</span>
+                  <img src="images/test3.jpg" alt="पूजा मेहता" loading="lazy" decoding="async" onerror="this.hidden=true" onload="this.hidden=false;this.previousElementSibling.hidden=true">
+                </div>
+                <div><h3>पूजा मेहता</h3><div class="customer-city">मुंबई</div></div>
+              </header>
+              <blockquote><p>“ऑनलाइन मीटिंग्स और बातचीत के दौरान कानों में discomfort और सुनने में असहजता महसूस होती थी। EarCare को अपनी daily routine में शामिल करने के बाद मुझे कानों में बेहतर comfort महसूस हुआ।”</p></blockquote>
+            </article>
+          </div>
+      </section>
+      <section id="faqs" class="">
+        <div class="eyebrow">FAQs</div>
+        <h2>आपके सवाल, जवाब यहाँ</h2>
+        <details>
+          <summary>EarCare क्या है?</summary>
+          <p>
+            EarCare एक Ayurvedic herbal powder है, जिसमें Neem, Giloy, Brahmi,
+            Turmeric, Garlic, Tulsi, Bilva और अन्य पारंपरिक herbal ingredients
+            शामिल हैं।
+          </p>
+        </details>
+        <details>
+          <summary>क्या EarCare hearing problem का इलाज करता है?</summary>
+          <p>
+           हाँ | EarCare कान की सामान्य देखभाल और hearing function का इलाज करता है|
+        </details>
+        <details>
+          <summary>क्या EarCare को रोज़ लिया जा सकता है?</summary>
+          <p>
+             हाँ | EarCare को रोज़ लिया जा सकता है, लेकिन product label के निर्देशों के अनुसार ही उपयोग करें।
+          </p>
+        </details>
+        <details>
+          <summary>EarCare में कौन-कौन से ingredients हैं?</summary>
+          <p>
+            EarCare में Neem, Giloy, Brahmi, Turmeric, Garlic, Tulsi, Bilva और
+            अन्य herbal ingredients शामिल हैं। पूरी जानकारी product label पर
+            उपलब्ध है।
+          </p>
+        </details>
+        <details>
+          <summary>क्या EarCare के कोई side effects हैं?</summary>
+          <p>
+            
+नही | EarCare के कोई side effects नहीं हैं|
+          </p>
+        </details>
+        <details>
+          <summary>कौन EarCare का उपयोग कर सकता है?</summary>
+          <p>
+            EarCare की suitability उम्र और health condition के अनुसार अलग हो
+            सकती है। Product label देखें और उपयोग से पहले qualified Ear
+            specialist से सलाह लें।
+          </p>
+        </details>
+      </section>
+      <div id="disclaimer" class="disclaimer">
+        <strong>DISCLAIMER</strong>
+        <p>
+          EarCare कोई medical diagnosis, treatment या cure नहीं है। यह डॉक्टर की
+          जाँच या सलाह का विकल्प नहीं है। कान में दर्द, सुनने में बदलाव,
+          discharge या लगातार परेशानी होने पर qualified Ear specialist
+          से जाँच कराएँ। Product का उपयोग label और विशेषज्ञ की सलाह के अनुसार
+          करें।
+        </p>
+      </div>
+      <div class="policy-links">
+        <button onclick="openModal('privacy')">Privacy</button
+        ><button onclick="openModal('terms')">Terms</button
+        ><button onclick="openModal('shipping')">Shipping</button
+        ><button onclick="openModal('cancel')">Cancellation</button
+        ><button onclick="openModal('contact')">Contact</button
+        ><button onclick="openModal('disclaimer')">Legal Disclaimer</button>
+      </div>
+
+      <div class="sticky" id="order-sticky">
+        <a href="#order-form">ORDER NOW →</a>
+      </div>
+      <div class="loading" id="loading">
+        <div class="loading-box">
+          <div class="spinner"></div>
+          <p>आपकी request भेजी जा रही है...</p>
+        </div>
+      </div>
+    </main>
+
+    <dialog id="order-dialog" aria-labelledby="order-dialog-title">
+      <button type="button" class="order-close" aria-label="Close order popup">
+        ×
+      </button>
+      <div class="eyebrow">EARCARE</div>
+      <h2 id="order-dialog-title">ORDER NOW</h2>
+      <div id="popup-order-card" class="form-card"></div>
+    </dialog>
+    <div class="pp-overlay" id="pp-overlay" onclick="closeIfOutside(event)">
+      <div class="pp-modal" id="pp-modal">
+        <button class="pp-close" onclick="closeModal()" aria-label="Close">
+          ×
+        </button>
+        <div id="pp-content"></div>
+      </div>
+    </div>
+
+    <script>
+      const $ = (s) => document.querySelector(s),
+        $$ = (s) => [...document.querySelectorAll(s)];
+
+      // Sticky order bar: hidden on the banner, visible from Problem onward, hidden on the order form.
+      const stickyOrder = $("#order-sticky");
+      const bannerSection = $(".banner");
+      const problemSection = bannerSection?.nextElementSibling || null;
+      const orderFormSection = $("#order-form");
+      let stickyFrame = 0;
+
+      function isInViewport(element) {
+        if (!element) return false;
+        const rect = element.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+      }
+
+      function updateStickyOrder() {
+        stickyFrame = 0;
+        if (!stickyOrder) return;
+
+        const problemStarted =
+          problemSection &&
+          problemSection.getBoundingClientRect().top < window.innerHeight;
+        const hideOnBanner = isInViewport(bannerSection) && !problemStarted;
+        const hideOnOrderForm = isInViewport(orderFormSection);
+
+        stickyOrder.classList.toggle(
+          "show",
+          !(hideOnBanner || hideOnOrderForm),
+        );
+      }
+
+      function scheduleStickyUpdate() {
+        if (!stickyFrame)
+          stickyFrame = requestAnimationFrame(updateStickyOrder);
+      }
+
+      window.addEventListener("scroll", scheduleStickyUpdate, {
+        passive: true,
+      });
+      window.addEventListener("resize", scheduleStickyUpdate);
+      updateStickyOrder();
+      $$(".faq button").forEach((b) =>
+        b.addEventListener("click", () => {
+          const f = b.parentElement;
+          f.classList.toggle("open");
+          b.querySelector("span").textContent = f.classList.contains("open")
+            ? "−"
+            : "+";
+        }),
+      );
+
+      const UTM_KEYS = [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_campaign_id",
+        "utm_adset",
+        "utm_adset_id",
+        "utm_ad",
+        "utm_ad_id",
+        "utm_placement",
+      ];
+      function setHidden(n, v) {
+        const i = document.querySelector('#orderForm input[name="' + n + '"]');
+        if (i) i.value = v || "";
+      }
+      function cookie(n) {
+        const m = document.cookie.match(
+          new RegExp("(?:^|;\\s*)" + n + "=([^;]*)"),
+        );
+        return m ? decodeURIComponent(m[1]) : "";
+      }
+      function savedValue(k) {
+        try {
+          return sessionStorage.getItem(k) || "";
+        } catch (_) {
+          return "";
+        }
+      }
+      function capture() {
+        const p = new URLSearchParams(location.search);
+        UTM_KEYS.forEach((k) => setHidden(k, p.get(k) || savedValue(k)));
+        UTM_KEYS.forEach((k) => {
+          if (p.get(k))
+            try {
+              sessionStorage.setItem(k, p.get(k));
+            } catch (_) {
+              /* storage may be unavailable */
+            }
+        });
+        const fbclid = p.get("fbclid") || "";
+        setHidden("fbclid", fbclid);
+        setHidden(
+          "fbc",
+          cookie("_fbc") || (fbclid ? "fb.1." + Date.now() + "." + fbclid : ""),
+        );
+        setHidden("fbp", cookie("_fbp"));
+      }
+      capture();
+
+      // Order form: allow only letters/spaces in name and valid Indian mobile digits.
+      const nameInput = $("#name");
+      const phoneInput = $("#phone");
+
+      nameInput?.addEventListener("input", () => {
+        nameInput.value = nameInput.value
+          .replace(/[^A-Za-z\u0900-\u097F ]/g, "")
+          .replace(/\s{2,}/g, " ")
+          .replace(/^\s+/, "");
+        err("nameError", false);
+      });
+
+      phoneInput?.addEventListener("input", () => {
+        let value = phoneInput.value.replace(/\D/g, "").slice(0, 10);
+        if (value && !/^[6-9]/.test(value)) value = value.slice(1);
+        phoneInput.value = value;
+        err("phoneError", false);
+      });
+
+      function validName(v) {
+        return /^[A-Za-z\u0900-\u097F]+(?: [A-Za-z\u0900-\u097F]+)+$/.test(
+          v.trim(),
+        );
+      }
+      function validPhone(v) {
+        return /^[6-9][0-9]{9}$/.test(v);
+      }
+      function err(id, on) {
+        document.getElementById(id)?.classList.toggle("show", on);
+      }
+      function eventId() {
+        return globalThis.crypto?.randomUUID
+          ? globalThis.crypto.randomUUID()
+          : "evt-" + Date.now() + "-" + Math.random().toString(16).slice(2);
+      }
+      const FORM_ENDPOINT =
+        "https://script.google.com/macros/s/AKfycbxT6e4aWhK8JTf9ebsb7OQgqvkRDXd1y5QQctOOkEnERqRnfzUv_6XF30E-9ne1Jwjx/exec";
+      const THANK_YOU_PAGE = "./Thankyou.html";
+      let formSubmitting = false;
+
+      async function submitForm(e) {
+        e.preventDefault();
+        if (formSubmitting) return false;
+
+        const form = document.getElementById("orderForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const loading = document.getElementById("loading");
+        const name = nameInput.value.trim().replace(/\s+/g, " ");
+        const phone = phoneInput.value.replace(/\D/g, "");
+        const nameOk = validName(name);
+        const phoneOk = validPhone(phone);
+
+        err("nameError", !nameOk);
+        err("phoneError", !phoneOk);
+        if (!nameOk || !phoneOk) return false;
+
+        nameInput.value = name;
+        phoneInput.value = phone;
+        capture();
+        setHidden(
+          "date",
+          new Intl.DateTimeFormat("en-IN", {
+            timeZone: "Asia/Kolkata",
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false,
+          }).format(new Date()),
+        );
+        setHidden("event_id", eventId());
+        setHidden("page_url", location.href);
+        setHidden("referrer", document.referrer);
+
+        formSubmitting = true;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "SUBMITTING...";
+        loading?.classList.add("show");
+        document.getElementById("order-dialog")?.close();
+
+        try {
+          const payload = new URLSearchParams();
+          new FormData(form).forEach((value, key) =>
+            payload.append(key, value),
+          );
+
+          await fetch(FORM_ENDPOINT, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            },
+            body: payload.toString(),
+            keepalive: true,
+          });
+          window.location.assign(THANK_YOU_PAGE);
+        } catch (error) {
+          formSubmitting = false;
+          submitBtn.disabled = false;
+          submitBtn.textContent = "जानकारी प्राप्त करें";
+          loading?.classList.remove("show");
+          alert(
+            "डेटा भेजा नहीं जा सका। कृपया internet connection जाँचकर दोबारा प्रयास करें।",
+          );
+        }
+        return false;
+      }
+      window.submitForm = submitForm;
+      const contents = {
+        privacy: `<div class="pp-mtitle"><i class="ti ti-shield-lock" aria-hidden="true"></i>Privacy Policy</div><div class="pp-mbadge">Last updated: June 2025</div><p class="pp-mpara">EarCare आपकी personal information की सुरक्षा को सर्वोच्च प्राथमिकता देता है। जब आप order करते हैं तो हम निम्नलिखित जानकारी एकत्र करते हैं:</p><ul class="pp-mlist"><li>नाम, मोबाइल नंबर और delivery address</li><li>Payment details (encrypted और secure)</li><li>Order history और purchase records</li></ul><div class="pp-mhl">आपकी जानकारी किसी third-party को नहीं बेची जाती। इसका उपयोग केवल order processing और delivery के लिए किया जाता है।</div><p class="pp-mpara">हम industry-standard SSL encryption का उपयोग करते हैं। किसी भी privacy concern के लिए हमसे contact करें।</p>`,
+        terms: `<div class="pp-mtitle"><i class="ti ti-file-description" aria-hidden="true"></i>Terms & Conditions</div><div class="pp-mbadge">Please read carefully</div><p class="pp-mpara">EarCare का उपयोग करके आप इन terms से सहमत होते हैं:</p><ul class="pp-mlist"><li>Product results व्यक्ति-दर-व्यक्ति अलग हो सकते हैं</li><li>यह product किसी बीमारी का इलाज नहीं है — wellness supplement है</li><li>18 वर्ष से कम आयु के व्यक्ति बिना guardian consent के order न करें</li><li>Fake/fraudulent orders के लिए legal action लिया जा सकता है</li><li>Product images केवल representation के लिए हैं</li></ul><div class="pp-mhl">EarCare किसी भी समय बिना prior notice के prices, offers या terms बदलने का अधिकार रखता है।</div>`,
+        shipping: `<div class="pp-mtitle"><i class="ti ti-truck-delivery" aria-hidden="true"></i>Shipping Policy</div><div class="pp-mbadge">Free Delivery All India</div><p class="pp-mpara">हम पूरे India में FREE shipping प्रदान करते हैं। Delivery timeline:</p><ul class="pp-mlist"><li>Metro cities (Delhi, Mumbai, Bengaluru): 3–5 business days</li><li>Tier-2 / Tier-3 cities: 5–7 business days</li><li>Remote / rural areas: 7–10 business days</li></ul><div class="pp-mhl">Order confirm होने के 24–48 घंटे के अंदर tracking number SMS/WhatsApp पर भेजा जाएगा।</div><ul class="pp-mlist"><li>Delivery attempt 3 बार की जाएगी — उसके बाद order वापस आ जाएगा</li><li>Incorrect address की जिम्मेदारी customer की होगी</li></ul>`,
+        cancel: `<div class="pp-mtitle"><i class="ti ti-refresh" aria-hidden="true"></i>Cancellation Policy</div><div class="pp-mbadge">7-Day Easy Return</div><p class="pp-mpara">आप order confirm होने के <strong>24 घंटे के अंदर</strong> cancellation request कर सकते हैं।</p><ul class="pp-mlist"><li>Order dispatch होने के बाद cancellation संभव नहीं</li><li>Damaged या wrong product मिलने पर 7 दिन के अंदर complaint करें</li><li>Opened/used products return नहीं किए जाएंगे</li><li>Refund 5–7 business days में original payment method पर</li></ul><div class="pp-mhl">Return के लिए product original packaging में होना ज़रूरी है। Unboxing video होने पर claim जल्दी process होता है।</div>`,
+        contact: `<div class="pp-mtitle"><i class="ti ti-headset" aria-hidden="true"></i>Contact Us</div><p class="pp-mpara">हमारी team आपकी मदद के लिए Available है — सोमवार से शनिवार, सुबह 9 बजे से शाम 6 बजे तक।</p><div class="pp-cgrid"><div class="pp-citem"><i class="ti ti-phone" aria-hidden="true"></i><div class="pp-clbl">Call / WhatsApp</div><div class="pp-cval">+91 8860606078</div></div><div class="pp-citem"><i class="ti ti-mail" aria-hidden="true"></i><div class="pp-clbl">Email</div><div class="pp-cval">support@ssherbalindia.com</div></div><div class="pp-citem"><i class="ti ti-clock" aria-hidden="true"></i><div class="pp-clbl">Support Hours</div><div class="pp-cval">Mon–Sat 9am–6pm</div></div><div class="pp-citem"><i class="ti ti-message-circle" aria-hidden="true"></i><div class="pp-clbl">Response Time</div><div class="pp-cval">Within 24 hours</div></div></div>`,
+        disclaimer: `<div class="pp-mtitle">Disclaimer</div><p class="pp-mpara">EarCare कोई medical diagnosis, treatment या cure नहीं है। यह डॉक्टर की जाँच या सलाह का विकल्प नहीं है। कान में दर्द, सुनने में बदलाव, discharge या लगातार परेशानी होने पर qualified healthcare professional से जाँच कराएँ। Product का उपयोग label और विशेषज्ञ की सलाह के अनुसार करें।</p>`,
+      };
+      // Policy modal does not modify body/html positioning or overflow.
+      // The fixed overlay itself blocks background interaction, so the page never reflows or shakes.
+      function lockPage() {}
+      function unlockPage() {}
+      function openModal(k) {
+        if (!contents[k]) return;
+        $("#pp-content").innerHTML = contents[k];
+        lockPage();
+        $("#pp-overlay").classList.add("show");
+        $("#pp-modal").scrollTo(0, 0);
+      }
+      function closeModal() {
+        if (!$("#pp-overlay").classList.contains("show")) return;
+        $("#pp-overlay").classList.remove("show");
+        unlockPage();
+      }
+      function closeIfOutside(e) {
+        if (e.target === $("#pp-overlay")) closeModal();
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+      $("#pp-overlay").addEventListener(
+        "wheel",
+        (e) => {
+          if (!$("#pp-modal").contains(e.target)) e.preventDefault();
+        },
+        { passive: false },
+      );
+      $("#pp-overlay").addEventListener(
+        "touchmove",
+        (e) => {
+          if (!$("#pp-modal").contains(e.target)) e.preventDefault();
+        },
+        { passive: false },
+      );
+
+      window.openModal = openModal;
+      window.closeModal = closeModal;
+      window.closeIfOutside = closeIfOutside;
+    </script>
+    <script>
+      (() => {
+        const dialog = document.getElementById("order-dialog"),
+          form = document.getElementById("orderForm"),
+          home = document.getElementById("inline-order-card");
+        let trigger;
+        document.querySelectorAll("[data-order-popup]").forEach((button) =>
+          button.addEventListener("click", (event) => {
+            if (typeof dialog.showModal !== "function") return;
+            event.preventDefault();
+            trigger = button;
+            document.getElementById("popup-order-card").appendChild(form);
+            dialog.showModal();
+            document.body.classList.add("order-popup-open");
+            document.getElementById("name").focus();
+          }),
+        );
+        dialog
+          .querySelector(".order-close")
+          .addEventListener("click", () => dialog.close());
+        dialog.addEventListener("click", (event) => {
+          const r = dialog.getBoundingClientRect();
+          if (
+            event.target === dialog &&
+            (event.clientX < r.left ||
+              event.clientX > r.right ||
+              event.clientY < r.top ||
+              event.clientY > r.bottom)
+          )
+            dialog.close();
+        });
+        dialog.addEventListener("close", () => {
+          home.appendChild(form);
+          document.body.classList.remove("order-popup-open");
+          trigger?.focus({ preventScroll: true });
+          scheduleStickyUpdate();
+        });
+      })();
+    </script>
+  </body>
+</html>
